@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vanilla Image Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="editor">
+      <button id="addText">＋ テキスト追加</button>
+      <div id="textList"></div>
+    </div>
+    <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+      <div class="actions">
+        <button id="saveBtn">Save Image</button>
+        <button id="filterGray">白黒</button>
+        <button id="filterBlur">ぼかし</button>
+        <button id="filterNone">元に戻す</button>
+        回転 <input id="rotate" type="range" min="-180" max="180" value="0">
+        拡大 <input id="scale" type="range" min="0.2" max="2" step="0.1" value="1">
+        <label class="fileUploader">
+          画像をアップロード
+          <input id="fileInput" type="file" hidden>
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="src.js"></script>
+</body>
+
+</html>
